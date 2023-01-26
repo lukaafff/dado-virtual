@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0E2A47;
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+    padding-bottom: 60px;
+}
+
+#sorteado {
+    position: relative;
+    background-color: #e1a92e;
+    border-radius: 50%;
+    width: 40px;
+    height: 41px;
+    text-align: center;
+    left: 47%;
+    font-size: 30px;
+}
+
+#dado {
+    width: 290px;
+    padding: 15px;
+}
+
+#btnSortear {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+/* Animar o dado */
+@keyframes mover {
+    0% {
+        transform: translateY(0px); /* mover no eixo Y vertical */
+        transform: rotate(45deg);   /* rotacionar 90 graus */
+        opacity: 0; /* opacidade 0 = 100% transparente */
+       }
+    50% {
+        transform:scale(50%); /* mudar tamanho para 50% */
+    }
+    100% {
+        transform: translateY(-15px);  /* mover no eixo Y vertical */
+        transform: rotate(-45deg);     /* rotacionar -90 graus */
+        opacity: 1; /* opacidade 1 = 0% transparente */
+    }
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 0; /* opacidade 0 = 100% transparente */
+    }
+    from {
+        opacity: 1; /* opacidade 1 = 0% transparente */
+    }
+}
+
+.animar {
+    animation: mover 0.5s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease-in;
+}
