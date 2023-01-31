@@ -23,4 +23,4 @@ Não.
 
 Hospedado no Netlify
 
-https://l-pokedex-treino.netlify.app/
+https://l-dado-virtual.netlify.app/
